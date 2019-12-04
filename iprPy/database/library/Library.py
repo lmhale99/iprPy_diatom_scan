@@ -82,7 +82,7 @@ class Library(Database):
                     record_name = record_file.stem
                     
                     # Load as an iprPy.Record object
-                    record = load_record(record_style, record_name, record_file)
+                    record = load_record(record_style, record_name, str(record_file))
                     records.append(record)
                     df.append(record.todict(full=False, flat=True))
             else:
